@@ -51,7 +51,7 @@ export default function LandingPage() {
     }
 
     try {
-      const response = await fetch("https://172.18.190.75/api/registration", {
+      const response = await fetch("https://13.220.150.65:8000/api/users/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
