@@ -30,7 +30,7 @@ export default function Login() {
     setSuccess("");
 
     try {
-      const response = await fetch("http://172.18.190.75/api/login", {
+      const response = await fetch("http://13.220.150.65/api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
