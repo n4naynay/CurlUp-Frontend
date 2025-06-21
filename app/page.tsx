@@ -201,22 +201,6 @@ export default function LandingPage() {
               />
             </div>
 
-            {/* Last Name */}
-            <div>
-              <Label htmlFor="middleName" className="block text-sm font-medium text-black mb-2">
-                Middle Name
-              </Label>
-              <Input
-                id="middlename"
-                type="text"
-                value={formData.middleName}
-                onChange={(e) => handleInputChange("lastName", e.target.value)}
-                className="w-full border-2 border-black rounded-none bg-white text-black focus:ring-0 focus:border-black h-10 sm:h-12 text-sm sm:text-base"
-                disabled={isLoading}
-                required
-              />
-            </div>
-
             {/* Gender and Date of Birth Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
