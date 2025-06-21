@@ -203,8 +203,8 @@ export default function LandingPage() {
 
             {/* Last Name */}
             <div>
-              <Label htmlFor="lastName" className="block text-sm font-medium text-black mb-2">
-                Last Name
+              <Label htmlFor="middleName" className="block text-sm font-medium text-black mb-2">
+                Middle Name
               </Label>
               <Input
                 id="middlename"
