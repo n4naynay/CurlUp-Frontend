@@ -32,3 +32,4 @@ jobs:
             sudo docker-compose down || true
             sudo docker-compose up --build -d
           EOF
+          
