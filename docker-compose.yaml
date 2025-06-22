@@ -1,18 +1,17 @@
-version: "3.8"
+version: '3'
 
 services:
-  nextjs:
+  web:
     build: .
-    expose:
-      - "3000"
-    environment:
-      - NODE_ENV=production
+    container_name: nextjs-app
+    ports:
+      - "3000:3000"
 
   nginx:
-    image: nginx:stable-alpine
+    image: nginx:1.28.0
     ports:
       - "80:80"
-    depends_on:
-      - nextjs
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - web
