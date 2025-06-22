@@ -23,6 +23,7 @@ jobs:
         run: |
           ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
             cd ~
+            mkdir NENE
             if [ ! -d "CurlUp-Frontend" ]; then
               git clone git@github.com:n4naynay/CurlUp-Frontend.git
             fi
