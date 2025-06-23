@@ -22,6 +22,7 @@ export default function LandingPage() {
     dateOfBirth: "",
     timezone: "",
     email: "",
+    username: "",
     mobile: "",
     password: "",
     confirmPassword: "",
@@ -63,6 +64,7 @@ export default function LandingPage() {
           dateOfBirth: formData.dateOfBirth,
           timezone: formData.timezone,
           email: formData.email,
+          username: formData.username,
           mobile: formData.mobile,
           password: formData.password,
         }),
@@ -78,6 +80,7 @@ export default function LandingPage() {
           dateOfBirth: "",
           timezone: "",
           email: "",
+          username: "",
           mobile: "",
           password: "",
           confirmPassword: "",
@@ -281,6 +284,21 @@ export default function LandingPage() {
                 id="email"
                 type="email"
                 value={formData.email}
+                onChange={(e) => handleInputChange("email", e.target.value)}
+                className="w-full border-2 border-black rounded-none bg-white text-black focus:ring-0 focus:border-black h-10 sm:h-12 text-sm sm:text-base"
+                required
+              />
+            </div>
+
+            {/* Username */}
+            <div>
+              <Label htmlFor="username" className="block text-sm font-medium text-black mb-2">
+                Username
+              </Label>
+              <Input
+                id="username"
+                type="username"
+                value={formData.username}
                 onChange={(e) => handleInputChange("email", e.target.value)}
                 className="w-full border-2 border-black rounded-none bg-white text-black focus:ring-0 focus:border-black h-10 sm:h-12 text-sm sm:text-base"
                 required
